@@ -47,6 +47,7 @@
             this.LblTotalDeuda = new System.Windows.Forms.Label();
             this.BtnListar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnListarDeudores = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -222,6 +223,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.BtnListarDeudores);
             this.groupBox2.Controls.Add(this.DgvClientes);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.BtnListar);
@@ -232,6 +234,16 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consultar Datos";
+            // 
+            // BtnListarDeudores
+            // 
+            this.BtnListarDeudores.Location = new System.Drawing.Point(52, 310);
+            this.BtnListarDeudores.Name = "BtnListarDeudores";
+            this.BtnListarDeudores.Size = new System.Drawing.Size(218, 36);
+            this.BtnListarDeudores.TabIndex = 9;
+            this.BtnListarDeudores.Text = "Listar Deudores";
+            this.BtnListarDeudores.UseVisualStyleBackColor = true;
+            this.BtnListarDeudores.Click += new System.EventHandler(this.BtnListarDeudores_Click);
             // 
             // FrmGestionDeClientes
             // 
@@ -274,6 +286,7 @@
         private System.Windows.Forms.Label LblTotalDeuda;
         private System.Windows.Forms.Button BtnListar;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button BtnListarDeudores;
     }
 }
 
