@@ -254,6 +254,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmGestionDeClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de clientes";
             this.Load += new System.EventHandler(this.FrmGestionDeClientes_Load);
             this.groupBox1.ResumeLayout(false);

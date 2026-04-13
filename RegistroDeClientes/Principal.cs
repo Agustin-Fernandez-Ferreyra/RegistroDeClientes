@@ -28,6 +28,19 @@ namespace RegistroDeClientes
         {
             Form Formulario = new FrmGestionDeClientes();
             Close();
+            
+        }
+
+        private void apagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {    
+                    
+        }
+
+        private void listadoDeClientesOrdenadosPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formuario = new FrmListadoOrdenado();
+            formuario.MdiParent = this;
+            formuario.Show();
         }
     }
 }
