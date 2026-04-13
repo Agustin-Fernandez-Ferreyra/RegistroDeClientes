@@ -16,37 +16,25 @@ namespace RegistroDeClientes
         {
             InitializeComponent();
         }
-        //Declaracion de un regustro
-        private struct Registro
-        {
-            public Int32 Codgio;
-            public string Usuario;
-            public Decimal Deuda;
-            public Decimal limite;
-        }
-        // Declaracion de vectores
-        private Registro [] Clientes = new Registro[10]; 
-        
-
-        // declaracion de Indice
-        private Int32 IND = 0;
+        //Declaracion de un registro
+       
 
         private void BtnCargar_Click(object sender, EventArgs e)
         {
-            if (IND < Clientes.Length)
+            if (Vectores. IND < Vectores.Clientes.Length)
             {
                 Int32 i = 0;
-                while (Clientes[IND].Codgio != Convert.ToInt32(TxtCodigo.Text) && i <IND)
+                while (Vectores.Clientes[Vectores.IND].Codgio != Convert.ToInt32(TxtCodigo.Text) && i < Vectores.IND)
                 {
                     i++;
                 }
-                if (i == IND)
+                if (i == Vectores.IND)
                 {
-                    Clientes[IND].Codgio = Convert.ToInt32(TxtCodigo.Text);
-                    Clientes[IND].Usuario = TxtUsuario.Text;
-                    Clientes[IND].Deuda = Convert.ToDecimal(Txtdeuda.Text);
-                    Clientes[IND].limite = Convert.ToDecimal(TxtLimite.Text);
-                    IND++;
+                    Vectores.Clientes[Vectores.IND].Codgio = Convert.ToInt32(TxtCodigo.Text);
+                    Vectores.Clientes[Vectores.IND].Usuario = TxtUsuario.Text;
+                    Vectores.Clientes[Vectores.IND].Deuda = Convert.ToDecimal(Txtdeuda.Text);
+                    Vectores.Clientes[Vectores.IND].limite = Convert.ToDecimal(TxtLimite.Text);
+                    Vectores.IND++;
                     Listar();
                     MessageBox.Show("Registro cargado correctamente");
                     TxtCodigo.Text = "";
@@ -57,7 +45,8 @@ namespace RegistroDeClientes
                 else
                 {
                     MessageBox.Show("El codigo ya existe, ingrese otro");
-                    
+                    TxtCodigo.Text = "";
+
                 }
 
             }
@@ -78,10 +67,10 @@ namespace RegistroDeClientes
         {
             Decimal total = 0;
             DgvClientes.Rows.Clear();
-            for (Int32 i = 0; i < IND; i++)
+            for (Int32 i = 0; i < Vectores.IND; i++)
             {
-                DgvClientes.Rows.Add(Clientes[i].Codgio, Clientes[i].Usuario, Clientes[i].limite, Clientes[i].Deuda);
-                total += Clientes[i].Deuda;
+                DgvClientes.Rows.Add(Vectores.Clientes[i].Codgio, Vectores.Clientes[i].Usuario, Vectores.Clientes[i].limite, Vectores.Clientes[i].Deuda);
+                total += Vectores.Clientes[i].Deuda;
                 LblTotalDeuda.Text = total.ToString();
             }
         }
@@ -125,33 +114,33 @@ namespace RegistroDeClientes
         }
         private void Precargar()
         {
-            Clientes[IND].Codgio = 1;
-            Clientes[IND].Usuario = "Juan Perez";
-            Clientes[IND].Deuda = 500;
-            Clientes[IND].limite = 1000;
-            IND++;
-            Clientes[IND].Codgio = 2;
-            Clientes[IND].Usuario = "Maria Gomez";
-            Clientes[IND].Deuda = 300;
-            Clientes[IND].limite = 800;
-            IND++;
-            Clientes[IND].Codgio = 3;
-            Clientes[IND].Usuario = "Carlos Sanchez";
-            Clientes[IND].Deuda = 200;
-            Clientes[IND].limite = 600;
-            IND ++; // Actualizar el índice para reflejar los registros precargados
+            Vectores.Clientes[Vectores.IND].Codgio = 1;
+            Vectores.Clientes[Vectores.IND].Usuario = "Juan Perez";
+            Vectores.Clientes[Vectores.IND].Deuda = 500;
+            Vectores.Clientes[Vectores.IND].limite = 1000;
+            Vectores.IND++;
+            Vectores.Clientes[Vectores.IND].Codgio = 2;
+            Vectores.Clientes[Vectores.IND].Usuario = "Maria Gomez";
+            Vectores.Clientes[Vectores.IND].Deuda = 300;
+            Vectores.Clientes[Vectores.IND].limite = 800;
+            Vectores.IND++;
+            Vectores.Clientes[Vectores.IND].Codgio = 3;
+            Vectores.Clientes[Vectores.IND].Usuario = "Carlos Sanchez";
+            Vectores.Clientes[Vectores.IND].Deuda = 200;
+            Vectores.Clientes[Vectores.IND].limite = 600;
+            Vectores.IND ++; // Actualizar el índice para reflejar los registros precargados
         }
 
         private void BtnListarDeudores_Click(object sender, EventArgs e)
         {
             Decimal total = 0;
             DgvClientes.Rows.Clear();
-            for (Int32 i = 0; i < IND; i++)
+            for (Int32 i = 0; i < Vectores.IND; i++)
             {
-                if (Clientes[i].Deuda > 0)
+                if (Vectores.Clientes[i].Deuda > 0)
                 {
-                    DgvClientes.Rows.Add(Clientes[i].Codgio, Clientes[i].Usuario, Clientes[i].limite, Clientes[i].Deuda);
-                    total += Clientes[i].Deuda;
+                    DgvClientes.Rows.Add(Vectores.Clientes[i].Codgio, Vectores.Clientes[i].Usuario, Vectores.Clientes[i].limite, Vectores.Clientes[i].Deuda);
+                    total += Vectores.Clientes[i].Deuda;
                 }
                 
                 
