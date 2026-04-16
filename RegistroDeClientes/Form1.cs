@@ -114,21 +114,7 @@ namespace RegistroDeClientes
         }
         private void Precargar()
         {
-            Vectores.Clientes[Vectores.IND].Codgio = 1;
-            Vectores.Clientes[Vectores.IND].Usuario = "Juan Perez";
-            Vectores.Clientes[Vectores.IND].Deuda = 500;
-            Vectores.Clientes[Vectores.IND].limite = 1000;
-            Vectores.IND++;
-            Vectores.Clientes[Vectores.IND].Codgio = 2;
-            Vectores.Clientes[Vectores.IND].Usuario = "Maria Gomez";
-            Vectores.Clientes[Vectores.IND].Deuda = 300;
-            Vectores.Clientes[Vectores.IND].limite = 800;
-            Vectores.IND++;
-            Vectores.Clientes[Vectores.IND].Codgio = 3;
-            Vectores.Clientes[Vectores.IND].Usuario = "Carlos Sanchez";
-            Vectores.Clientes[Vectores.IND].Deuda = 200;
-            Vectores.Clientes[Vectores.IND].limite = 600;
-            Vectores.IND ++; // Actualizar el índice para reflejar los registros precargados
+            
         }
 
         private void BtnListarDeudores_Click(object sender, EventArgs e)
