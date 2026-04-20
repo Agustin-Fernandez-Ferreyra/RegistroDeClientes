@@ -20,14 +20,14 @@ namespace RegistroDeClientes
 
         private void agrToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new FrmGestionDeClientes();
+            Form formulario = new AgregarClientes();
             formulario.MdiParent = this;
             formulario.Show();
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form Formulario = new FrmGestionDeClientes();
+            Form Formulario = new FrmClientesDeudores();
             Close();
             
         }
@@ -56,6 +56,25 @@ namespace RegistroDeClientes
             Form formuario = new FrmListadoOrdenado();
             formuario.MdiParent = this;
             formuario.Show();
+        }
+
+        private void tempToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void listadoDeClientesDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FrmClientesDeudores();
+            formulario.MdiParent = this;
+            formulario.Show();
+        }
+
+        private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ListadoDeTodosLosClientes ();
+            formulario.MdiParent = this;
+            formulario.Show();
         }
     }
 }

@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarClientes.Designer.cs">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoDeTodosLosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoDeTodosLosClientes.Designer.cs">
+      <DependentUpon>ListadoDeTodosLosClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ordenar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +79,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarClientes.resx">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDeTodosLosClientes.resx">
+      <DependentUpon>ListadoDeTodosLosClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ordenar.resx">
       <DependentUpon>Ordenar.cs</DependentUpon>
