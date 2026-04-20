@@ -52,6 +52,12 @@
     <Compile Include="AgregarClientes.Designer.cs">
       <DependentUpon>AgregarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosMio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosMio.Designer.cs">
+      <DependentUpon>DatosMio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoDeTodosLosClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     <EmbeddedResource Include="AgregarClientes.resx">
       <DependentUpon>AgregarClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatosMio.resx">
+      <DependentUpon>DatosMio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +125,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20250102-WA0007.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
