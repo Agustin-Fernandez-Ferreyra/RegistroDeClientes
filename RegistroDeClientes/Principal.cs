@@ -79,7 +79,7 @@ namespace RegistroDeClientes
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new DatosMio ();
+            Form formulario = new DatosMio();
             formulario.MdiParent = this;
             formulario.Show();
         }
