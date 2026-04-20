@@ -76,5 +76,12 @@ namespace RegistroDeClientes
             formulario.MdiParent = this;
             formulario.Show();
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new DatosMio ();
+            formulario.MdiParent = this;
+            formulario.Show();
+        }
     }
 }
